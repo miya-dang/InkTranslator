@@ -1,0 +1,27 @@
+# Env
+.env
+**/.env
+
+# Backend
+backend/.venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.pytest_cache/
+backend/uv.lock
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env.local
+frontend/.env.development
+frontend/.env.production
+
+# Logs and temp files
+*.log
+*.tmp
+
+# IDE/System
+.DS_Store
+.vscode/
+.idea/
