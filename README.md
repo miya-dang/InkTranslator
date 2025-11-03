@@ -34,14 +34,18 @@ A DeepL Translate API key
 
 ### 1️⃣ Clone the Repository
 git clone https://github.com/miya-dang/InkTranslator.git
+
 cd InkTranslator/backend
 
 ### 2️⃣ Backend Setup (FastAPI)
 
 **Create Virtual Environment & Install Dependencies**
 cd backend
+
 python -m venv .venv
+
 source .venv/bin/activate      # macOS/Linux
+
 .venv\Scripts\activate         # Windows
 
 pip install -e .
@@ -52,51 +56,12 @@ pip install -r requirements.txt
 
 **🔐 Environment Variables**
 
-Create a .env file inside backend/src like this:
-
-APP_NAME=Ink Translator API
-APP_VERSION=0.0.0
-APP_DESCRIPTION=API for translating text in manga/manhwa/manhua images
-DEBUG=false
-HOST=0.0.0.0
-PORT=8000
-
-ENABLE_CORS=true
-ALLOWED_ORIGINS=["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:5173"]
-
-ENABLE_RATE_LIMITING=true
-TRANSLATION_RATE_LIMIT_REQUESTS=10
-TRANSLATION_RATE_LIMIT_WINDOW=5
-PREVIEW_RATE_LIMIT_REQUESTS=20
-PREVIEW_RATE_LIMIT_WINDOW=5
-BATCH_RATE_LIMIT_REQUESTS=2
-BATCH_RATE_LIMIT_WINDOW=10
-
-MANGA_OCR_ENABLED=true
-EASYOCR_GPU=false
-
-GOOGLE_TRANSLATE_ENABLED=true
-DEEPL_ENABLED=false
+Create a .env file inside backend/src:
 
 DEEPL_API_KEY=your-actual-api-key
+
 DEEPL_API_URL=https://api-free.deepl.com/v2/translate
 
-TRANSLATION_TIMEOUT=30
-TRANSLATION_MAX_RETRIES=2
-TRANSLATION_RETRY_DELAY=1.0
-
-LOG_LEVEL=INFO
-LOG_TO_FILE=true
-LOG_FILE_PATH=ink_translator.log
-LOG_MAX_SIZE_MB=100
-LOG_BACKUP_COUNT=5
-
-MAX_WORKERS=4
-ASYNC_TIMEOUT=300
-
-ENABLE_DOCS=true
-
-RELOAD=false
 
 **▶️ Run the Server**
 uvicorn main:app --reload
